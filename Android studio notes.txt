@@ -1,0 +1,198 @@
+/******************************************************************************************************* 
+Android Studio Course Notes by Jai Shah 
+Every paragraph indicates a new topic or new function. 
+Refer the udemy course to understand these notes better.
+Note: This is saved as a .java file only for the customisation purposes and cannot run as a program.
+
+Excluded topics: 
+
+Fragments (not applicable to our project)
+Recycler view (not applicable to our project)
+Card view (not applicable to our project)
+Create a custom List View (not applicable to our project)
+Android action bar (not applicable to our project)
+Save data using text files (its made on a very old version of android studio and its repetitive)
+Save data using SQL Lite data base (Old tutorial)
+Read data from a RSS feed (not applicable to our project)
+Send SMS using SMS manager class (not applicable to our project)
+Android Service (not applicable to our project)
+Android app widgets (not applicable to our project)
+*********************************************************************************************************/
+
+First steps to do before starting to make layout:
+Set layout to linear
+Orientation to vertical
+Remove text view part below it
+
+To get components from the layout:
+create variables like this:
+name_of_variable = findViewById(R.id.id_of_element);
+
+To set visibility of a component:
+variable_name.setVisibility(View.GONE); or variable_name.setVisibility(View.VISIBLE);
+
+To set event listener:
+variable_name.setOnClickListener(new View.OnClickLisener){};
+
+To get text from text box: variable_name.getText()
+
+To convert to string: variable_name.toString()
+
+To rim end spaces: variable_name.trim()
+
+To check if input is empty or not (returns true or false value): variable_name.isEmpty()
+
+Convert text to string, trim it and convert to integer: 
+int variable = Integer.parseInt(variable_name.getText().toString.trim());
+
+To set text to a text view: variable_name.setText(Variable name of string or Text in " ");
+
+To check equality: variable_name.equals("Text" or variable anme of same data type); //Returns true or false
+
+To remove hard coded string warning: press Alt + Enter and extract, add that string in strings.xml
+
+To error check that user has enetered somethng or not:
+Check using isEmpty() and add "TOAST" inside if part. //Toast part is ling line of code displaying error message made by you.
+
+Create new Intent object: 
+Intent intent_name = new Intent(current_activity.this, full_package_name.new_activity_name.class); 
+//This sends you from current_activity (eg main activity) to new_activity_name (eg Activity 2).
+After that enter this: 
+startActivity(intent_name);
+
+To send extra data to another activity:
+intent_name.putExtra("name of data that you pass", name of variable that has the data currently); 
+//Check the multiple data type options you see after you type putExtra like string, int, double etc.
+
+To get data on another activity: (type on other activity page)
+String variable _name = getIntent().getStringExtra("name of data that you pass"); 
+// getStringExtra part can change depending on what data type you have assed on the previous activity page
+// ("name of data that you pass") should be exactly same as what you entered on previous activity (refer line 63 or so for same example)
+
+To go to a different activity and also send a request to get data: 
+// After creating new intent,
+startActivityForResult(intent_name, unique_integer_value);
+// Instead of entering inteer value, declare a constant on top of code and use that name
+final int CONSTANT = 3; // Constants are declared in all caps for coding purposes
+startActivityForResult(intent_name, CONSTANT);
+
+To get data back you also need to create a method with the above steps:
+right click -> Generate -> Override methods -> onActivityResult()
+// Inside the method check the value of requestCode == CONSTANT to verify if the method came back from your specific activity
+// Inside the next activity where you have to take value from us setResult function
+setResult(RESULT_OK, intent) // Create an intent before this with putExtra to get value that you need
+Activity_name.this.finish(); // RESULT_OK and RESULT_CANCELLED is for checking if user has returned from clicking button or just pressing the back button
+
+In implicit intents to call smebody:
+Intent intent = new Intent(Intent.ACTION_DIAL);
+startActivity(intent);
+
+To call a specific number:  
+Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: 7506555607")); // Use the "tel" word 
+startActivity(intent);
+
+To open another app that is made to look like call app:
+Add an activity filter in the new app:
+app -> manifests -> AndroidManifest.xml and add new <intent-filter> there and use DEFAULT in category tag.
+To respond to the specific number use the <data> tag nside <intent-filter>:
+<data android:scheme = "tel"/> // This is where the "tel" word comes in place.
+But you can do only 1 type at a time, either default intent filter or data intent filter so to accept both make 2 intent-filter tags.	
+
+To open maps or web page:
+Use ACTION_VIEW, Uri.parse("geo:0,0?q=Sohar,Oman") // to search Sohar,Oman in maps
+Use ACTION_VIEW, Uri.parse("http://www.google.com") // To search google.com on web 
+// Search something similar for camera app for our project
+
+To create custom Edit Text first add this in gradle scripts:
+Inside dependencies{}
+compile 'com.android.support:design:version_of_sdk' //SDK version will be mentioned somewhere anove on the same page
+Add new style in styles.xml with parent as "@android:style/TextAppearance" and add "android:textColor" as name inside item under it. 
+// Refer course video for detailed steps for this 
+
+To create a custom TOAST:
+Create a new layout resource file and add an id property inside it (eg. android:id="@+id/linlay")
+In layout.xml, add horizontal layout inside the currect vertical layout then add text view and image view to insert images into the toast.
+Create a new method in main activity with string argument, and type the following inside it:
+View toastView = getLayoutInflater().inflate(R.layout.toast, (ViewGroup) findViewById(R.id.linlay)); 
+// To add the toast layout xml file here and inflate it and also link it with the id we gave to the component in toast layout file. 
+Connect the text view that was on toast layout to main activity: (continue inside the method)
+TextView tvToast = (TextView) toastView.findViewById(R.id.tvToast); 
+tvToast.setText(message); // Set message that has been passed into the method 
+Then create the toast:
+Toast toast_name = new Toast(MainActivity.this);
+toast.setDuration(Toast.LENGTH_LONG);
+toast.setView(toastView);
+toast.setGravity(Gravity.BOTTOM|Gravity.FILL_HORIZONTAL,0,0); // For setting the gravity and also the x and y axis.
+toast.show(); // To start showing it. 
+Inside Main: showToast("Your Message !");
+Add background property and text color etc. to make it look good.
+
+To save data in the phone: 
+To create a file type on top:
+public static final string MY_PREFS_FILENAME = "any_filename" // Preferable start file name with package name.
+Now inside main or inside the button function:
+SharedPreferences.Editor editor = getSharedPreferences(MY_PREFS_FILENAME, MODE_PRIVATE).edit(); // Connection made 
+editor.putString("name",name); // Inside the () you need to enter a key value pair where key has to be a string but value can be any data type and accordingly the put statement will change.
+// Then add any amount of data into file.
+editor.commit(); // To save the data to the file.
+
+To get the saved data back:
+SharedPreferences prefs = getSharedPreferences(MY_PREFS_FILENAME, MODE_PRIVATE); //Find the file
+String user = prefs.getString("name", ""); // (Name of key, default value)
+
+Async Library to do heavy tasks in backroud without interupting UI : https://developer.android.com/reference/android/os/AsyncTask (Can be used to show proress bars)
+
+To grant permissions to dangerous activities (like camera, contacts, storage etc):
+Outside main declare first: 
+private static final int UNIQUE_REQUEST_CODE = 12345; //Can be any integer value
+if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.PERMISSION_NAME) != PackageManager.PERMISSION_GRANTED) // PERMISSION_NAME can be selected from dropdown. // If condition to check if its already granted or not.
+Inside if condition:
+ActivityCompat.requestPermissions(MainActivity.this, new String[] {Manifest.permission.PERMISSION_NAME}, UNIQUE_REQUEST_CODE); // Unique request code should be uswr defined at beginning and can be any integer value.
+Now add the permission to AndroidManifest.xml file: (should be done for any kind of permission)
+<uses-permission android:name="android.permission,PERMISSION_NAME"/>
+
+When user denies to give a specific permission:
+ovveride methods -> on request permission result:
+First use if condition with request code to check for that particuar request
+Then use another if the soo what the use clicked using this:
+if(grantResults[0] == PackageManager.PERMISSION_GRANTED) {}
+else if(grantResults[0] == PackageManager.PERMISSION_DENIED)
+{
+	if(ActivitCompat.shouldShowRequestPermissionRationale(MainActivity.this, Manifest.permission.PERMISSION_NAME)) //This is to check if user has checked the nver show again box, if not then we will show the dialog box.
+	{
+	 AlertDialog.builder dialog = new AlertDialog.builder(this);
+	 dialog.setMessage("This permission is important !").setTitle("Important Permission required"); //To tell user more info about permission so he allows it.
+	 // Then add positive and negative buttons on dialog along with their onclick listener, copy above code of    asking permission here if user clicks positive button.
+	 dialog.show();
+	}
+	else
+	{
+	// This is the case where user clicks never ask again and then denies the permission.
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************************************************
+I didn't have time to see the course any further so sorry for that.
+Topics left that I think are important: 
+Backendless (3hr and 49 min topic).
+Hope you understood these notes.
+Peace !
+***************************************************************************************************************/
+
+
+
+
+
