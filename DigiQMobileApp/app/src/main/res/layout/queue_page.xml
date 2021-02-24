@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_queue_page"
+    android:orientation="vertical"
+    tools:context=".QueuePage" >
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/kjsieit"
+        android:contentDescription="@string/heroimage" />
+
+    <TextView
+        android:id="@+id/tvQueueWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:gravity="center"
+        android:text="@string/in_queue_msg"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/primary_bg"
+        android:elevation="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/name"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvAppNum"
+            android:layout_width="348dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="@string/application_number"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvWaitTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/approximate_wait_time"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/primary_bg"
+        android:elevation="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvWaitTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="#FFFFFF"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLeaveQueue"
+            android:layout_width="117dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_danger"
+            android:fontFamily="@font/open_sans_bold"
+            android:stateListAnimator="@animator/button_animator"
+            android:text="Leave"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/btnRefresh"
+            android:layout_width="126dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/drawable_button"
+            android:fontFamily="@font/open_sans_bold"
+            android:stateListAnimator="@animator/button_animator"
+            android:text="Refresh"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            tools:ignore="ButtonStyle" />
+
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

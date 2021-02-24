@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_abtus_page"
+    android:orientation="vertical"
+    tools:context=".AboutUsPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:text="@string/digiq"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="@string/about_us"
+        android:textColor="#0B0A0A"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="30dp"
+        android:gravity="center"
+        android:text="@string/digiq_is_an_app"
+        android:textColor="#0B0A0A"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

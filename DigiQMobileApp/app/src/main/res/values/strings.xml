@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">DigiQ</string>
+    <string name="heroimage">HeroImage</string>
+    <string name="in_queue_msg">You are in the Queue</string>
+    <string name="name">Name: </string>
+    <string name="application_number">Application Number: </string>
+<!--    <string name="ticket_number">Ticket Number</string>-->
+    <string name="approximate_wait_time">Approximate Wait Time</string>
+<!--    <string name="hr_m">Hr : m</string>-->
+    <string name="leave_confirmation">Are You Sure you want to Leave ?</string>
+    <string name="leave_queue">Leave Queue</string>
+    <string name="cancel">Cancel</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="join_queue">Join Queue</string>
+    <string name="phone_number">Phone number</string>
+    <string name="e_mail_id">E-mail Id</string>
+    <string name="digiq">DigiQ</string>
+    <string name="about_us">About Us</string>
+    <string name="digiq_is_an_app">DigiQ is an app</string>
+    <string name="e_g_jai_shah">e.g. Jai Shah</string>
+    <string name="e_g_20200001">e.g. 20200001</string>
+    <string name="e_g_jai_shah_gmail_com">e.g. jai.shah@gmail.com</string>
+    <string name="e_g_9812348765">e.g. 9812348765</string>
+    <string name="scan">SCAN</string>
+    <string name="qr_code_image">QR code Image</string>
+    <string name="qr_code_found">Scan</string>
+    <string name="verification_code">QR Code Verified</string>
+    <string name="qr_found_logcat">QR Code Found: </string>
+    <string name="invalid_qr">Invalid QR code !</string>
+    <string name="app_num">Application number: </string>
+    <string name="name_show">Name: </string>
+
+    <string name="nameerror">Enter a valid name</string>
+    <string name="emailerror">Enter a valid email</string>
+    <string name="phonenumbererror">Enter a valid phone number</string>
+    <string name="applicationnumbererror">Enter a valid application</string>
+
+
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "941939854651",
+    "firebase_url": "https://digiq-f5f74.firebaseio.com",
+    "project_id": "digiq-f5f74",
+    "storage_bucket": "digiq-f5f74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941939854651:android:3852066a0f3b34ff36bb1e",
+        "android_client_info": {
+          "package_name": "com.example.digiq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941939854651-guda0udlv90skcm5i574ud01leaa14bf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC26nJwNRN-7iv5wHbHhypSi3LOROkGerU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941939854651-guda0udlv90skcm5i574ud01leaa14bf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

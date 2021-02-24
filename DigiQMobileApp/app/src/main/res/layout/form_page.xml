@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_form_page"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".FormPage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/name"
+        android:textColor="#191717"
+        android:textColorLink="#B61212"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/drawable_tv"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="@string/e_g_jai_shah"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:shadowColor="#000000" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/application_number"
+        android:textColor="#191717"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/drawable_tv"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="@string/e_g_20200001"
+        android:inputType="number"
+        android:maxLength="8"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/e_mail_id"
+        android:textColor="#191717"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/drawable_tv"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="@string/e_g_jai_shah_gmail_com"
+        android:inputType="textEmailAddress"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:shadowColor="#000000"
+        android:shadowDx="10"
+        android:shadowDy="10"
+        android:singleLine="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="@string/phone_number"
+        android:textColor="#191717"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/idPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/drawable_tv"
+        android:elevation="4dp"
+        android:ems="10"
+        android:fontFamily="@font/open_sans_semibold"
+        android:hint="@string/e_g_9812348765"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:paddingStart="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/drawable_button"
+        android:clickable="true"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:fontFamily="@font/open_sans_bold"
+        android:stateListAnimator="@animator/button_animator"
+        android:text="@string/join_queue"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp" />
+
+</LinearLayout>
