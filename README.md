@@ -6,7 +6,7 @@
 
 <p>Screenshots of the project: </p>
 
-![App SS 1](https://github.com/jai-cs/DigiQ/blob/main/Screenshots/AppSS1.jpg)
+![App SS 1](https://github.com/jai-cs/DigiQ/blob/main/Screenshots/AppSS1.jpg) 
 ![App SS 2](https://github.com/jai-cs/DigiQ/blob/main/Screenshots/AppSS2.jpg)
 ![App SS 3](https://github.com/jai-cs/DigiQ/blob/main/Screenshots/AppSS3.jpg)
 ![App SS 4](https://github.com/jai-cs/DigiQ/blob/main/Screenshots/AppSS4.jpg)
